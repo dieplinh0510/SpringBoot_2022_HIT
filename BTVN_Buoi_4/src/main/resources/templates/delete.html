@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/api/user/delete}" th:object="${user} " method="post">
+        Ban co chac muon xoa : <input type="text" th:field = "*{username}">
+        <input type="hidden" th:field = "*{id}">
+        <input type="submit" value="Xac nhan">
+
+    </form>
+</body>
+</html>

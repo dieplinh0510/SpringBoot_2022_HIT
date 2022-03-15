@@ -1,12 +1,12 @@
 package com.example.btvn_buoi_3;
 
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Controller
 public class Store {
     static  List<User> users = new ArrayList<>();
 

@@ -1,8 +1,8 @@
 package com.example.btvn_buoi_3;
 
-import org.springframework.stereotype.Component;
 
-@Component
+import java.util.Objects;
+
 public class User {
     private Integer id;
     private String userName;
@@ -10,6 +10,22 @@ public class User {
     private String fullName;
 
     public User() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        if (this.userName.equals(user.userName) && this.password.equals(user.password))
+            return true;
+        else
+            return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userName, password);
     }
 
     public User(Integer id, String userName, String password, String fullName) {

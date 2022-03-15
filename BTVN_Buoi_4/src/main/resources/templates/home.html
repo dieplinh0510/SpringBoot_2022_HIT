@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+
+        <tr>
+            <td>ID</td>
+            <td>UserName</td>
+            <td>Password</td>
+            <td>Full Name</td>
+            <td>Edit</td>
+            <td>Delete</td>
+            <td></td>
+        </tr>
+        <tr th:each = "user : ${users}">
+            <td th:text="*{user.id}"></td>
+            <td th:text="*{user.username}"></td>
+            <td th:text="*{user.password}"></td>
+            <td th:text="*{user.getFullName()}"></td>
+            <td> <a th:href="@{'/api/user/edit?id='+${user.id}}">Edit</a></td>
+            <td> <a th:href="@{'/api/user/delete?id=' + ${user.id}}">Delete</a></td>
+
+        </tr>
+
+    </table>
+</body>
+</html>
