@@ -40,11 +40,12 @@ public class LinkController {
         try {
             link.setShortedLink(NanoIdUtils.randomNanoId(random, Constants.ALPHABET, Constants.LENGTH_OFF_LINK));
             link.setOriginalLink(originalLink);
+            return  ResponseEntity.status(200).body(linkRepository.save(link));
         } catch (Exception ex){
             throw new DuplicateException("Trung shortedLink");
         }
 
-        return  ResponseEntity.status(200).body(linkRepository.save(link));
+
     }
 
     @GetMapping("/{shortedLink}")
