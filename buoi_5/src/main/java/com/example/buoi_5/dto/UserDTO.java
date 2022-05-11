@@ -1,2 +1,16 @@
-package com.example.buoi_5.dto;public class UserDTO {
+package com.example.buoi_5.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+public class UserDTO {
+    private String userName;
+    private String password;
+    private String fullName;
 }

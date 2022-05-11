@@ -1,4 +1,4 @@
-package com.example.buoi_5.exception;
+package com.example.ktra_1.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

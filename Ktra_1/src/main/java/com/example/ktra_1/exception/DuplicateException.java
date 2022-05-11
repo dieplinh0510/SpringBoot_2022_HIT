@@ -1,4 +1,4 @@
-package com.example.buoi_5.exception;
+package com.example.ktra_1.exception;
 
 public class DuplicateException extends RuntimeException{
     public DuplicateException(String message) {
